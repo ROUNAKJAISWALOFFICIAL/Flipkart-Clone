@@ -4,23 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!
-    </title>
+    <title>Online Shopping Site</title>
     <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
     <style>
         * {
             margin: 0;
             padding: 0;
-
         }
 
         a {
             text-decoration: none;
             color: grey;
         }
-
 
         body {
             background-color: rgb(241, 241, 241);
@@ -37,6 +33,7 @@
             height: 100%;
             margin: 0 auto;
             justify-content: space-between;
+            gap: 50px;
         }
 
         .left {
@@ -45,6 +42,10 @@
             gap: 15px;
             width: 70%;
             position: relative;
+        }
+
+        .left img {
+            cursor: pointer;
         }
 
         .search-box {
@@ -76,15 +77,17 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            position: relative;
         }
 
         .login {
             display: flex;
             align-items: center;
             gap: 5px;
-            padding: 8px;
+            padding: 6px;
             cursor: pointer;
             font-size: 15px;
+            position: relative;
         }
 
         .login .drop-down-menu {
@@ -96,8 +99,112 @@
             height: 25px;
             color: gray;
         }
-    </style>
 
+        .login p {
+            color: rgb(0, 0, 0);
+        }
+
+        .login:hover {
+            background-color: #0053d8;
+            border-radius: 6px;
+            color: white;
+            transition: 0.1s;
+        }
+
+        .login:hover p {
+            color: white;
+        }
+
+
+
+        .login:hover .drop-down-menu {
+            transform: rotate(180deg);
+            transition: transform 0.5s ease;
+        }
+
+        /* Ensure dropdown is hidden by default */
+        .dropdown-menu {
+            position: absolute;
+            top: 50px;
+            right: 0;
+            left: -40px;
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.104);
+            border-radius: 4px;
+            width: 250px;
+            display: none;
+            /* Hidden initially */
+            z-index: 100;
+        }
+
+        /* Show dropdown when hovering over .login */
+        .login:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Style the dropdown menu */
+        .dropdown-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-menu li {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+        .dropdown-menu li i {
+            margin-left: 7px;
+            margin-right: 20px;
+            font-size: 16px;
+            color: #262626;
+        }
+
+        .dropdown-menu li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .dropdown-menu li:hover {
+            background-color: #f6f5f5;
+            transition: 0.3s;
+        }
+
+        /* Ensure the whole login button is a clickable link */
+        .login a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px;
+            font-size: 15px;
+            text-decoration: none;
+            color: black;
+        }
+
+
+        /* Invert images when hovering */
+        .login:hover img {
+            filter: brightness(0) invert(1);
+        }
+
+        .threedot {
+            background-color: transparent;
+            border-radius: 5px;
+            border: 1px solid transparent;
+        }
+
+        .threedot:hover {
+            background-color: rgba(0, 0, 0, 0.03);
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.145);
+        }
+
+        .three-dot-dropdown-menu {}
+    </style>
 </head>
 
 <body>
@@ -105,27 +212,47 @@
     <nav>
         <div class="navbar">
             <div class="left">
-                <img src="img/fkheaderlogo_exploreplus-44005d.svg" alt="logo">
-                <div class="search-box">
+                <img src="img/fkheaderlogo_exploreplus-44005d.svg" title="Flipkart" alt="logo">
+                <div class="search-box" title="Search for products, brands and more">
                     <input type="text" placeholder="Search for products, brands and more">
                     <i class="fas fa-search"></i>
                 </div>
             </div>
 
             <div class="right">
-                <a href="">
                 <div class="login">
+                    <a href="https://www.flipkart.com/account/login">
                         <img src="img/profile-52e0dc.svg" alt="Profile">
                         <p>Login</p>
                         <img src="img/downarrow.svg" class="drop-down-menu" alt="drop-down-icon">
+                    </a>
+
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu">
+                        <ul>
+                            <li><a href="#"> <i class="fas fa-user"></i>MyProfile</a></li>
+                            <li><a href="#"><i class="fas fa-star"></i>Flipkart Plus Zone</a></li>
+                            <li><a href="#"><i class="fas fa-box"></i>Orders</a></li>
+                            <li><a href="#"><i class="fas fa-heart"></i>Wishlist</a></li>
+                            <li><a href="#"><i class="fas fa-gift"></i>Rewards</a></li>
+                            <li><a href="#"><i class="fas fa-credit-card"></i>Gift Cards</a></li>
+                        </ul>
                     </div>
-                </a>
-                <div><a href=""><img src="img/header_cart-eed150.svg" alt="cart-icon"></a></div>
-                <div><a href=""><img src="img/Store-9eeae2.svg" alt=""></a></div>
-                <div><a href=""><img src="img/three-dot.svg" alt=""></a></div>
+                </div>
+
+
+
+                <div title="Cart"><a href=""><img src="img/header_cart-eed150.svg" alt="cart-icon"></a></div>
+
+                <div title="Become a Seller"><a href=""><img src="img/Store-9eeae2.svg" alt=""></a></div>
+
+                <div title="Dropdown with more help links" class="threedot"><a href=""><img src="img/three-dot.svg"
+                            alt=""></a> </div>
+
             </div>
         </div>
     </nav>
+
 </body>
 
 </html>
