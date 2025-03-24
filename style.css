@@ -108,9 +108,13 @@ nav {
 
 
 .login:hover .drop-down-menu {
-    transform: rotate(180deg);
-    transition: transform 0.5s ease;
+    transform: rotate(-180deg);
 }
+.login .drop-down-menu {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
 
 /* Ensure dropdown is hidden by default */
 .dropdown-menu {
@@ -288,7 +292,7 @@ category css
     line-height: 15px;
 }
 
-.fashion-dropdown-container {
+.dropdown-container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -310,6 +314,7 @@ category css
     border-radius: 5px;
     padding: 15px 0;
     flex-direction: column;
+
 }
 
 /* Ensure dropdown items are in a vertical list */
@@ -341,23 +346,37 @@ category css
     display: flex;
     align-items: center;
     width: 100%;
+    justify-content: space-between;
 }
 
 /* Icons inside dropdown */
 .fashion-dropdown ul li a i {
     margin-right: 8px;
 }
+.fashion-dropdown ul li a i{
+rotate: -90deg;
+color: gray;
+display: none;
+}
+.fashion-dropdown ul li:hover i{
+display:block;
+transition: 0.2s;
+}
 
-.fashion-dropdown-container:hover .blue-invert span {
+.dropdown-container:hover .blue-invert span {
     color: #0053d8;
 }
 
-.fashion-dropdown-container:hover .blue-invert i {
+.blue-invert i {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+}
+
+.dropdown-container:hover .blue-invert i {
     transform: rotate(-180deg);
-    transition: 0.3s;
 }
 
 /* Show dropdown on hover */
-.fashion-dropdown-container:hover .fashion-dropdown {
+#fashion:hover .fashion-dropdown {
     display: flex;
 }
