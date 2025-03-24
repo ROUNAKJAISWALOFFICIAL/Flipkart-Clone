@@ -245,6 +245,7 @@ nav {
     background-color: #f6f5f5;
     transition: 0.3s;
 }
+
 /*
 category css
 */
@@ -257,15 +258,19 @@ category css
 
 .category ul {
     display: flex;
-    justify-content: space-evenly; 
-    align-items: center; /* Centers items vertically */
-    height: 100%; /* Ensures full height for proper vertical centering */
+    justify-content: space-evenly;
+    align-items: center;
+    /* Centers items vertically */
+    height: 100%;
+    /* Ensures full height for proper vertical centering */
 }
 
 .category ul li {
     display: flex;
-    flex-direction: column; /* Stacks image and text vertically */
-    align-items: center; /* Centers items inside each <li> */
+    flex-direction: column;
+    /* Stacks image and text vertically */
+    align-items: center;
+    /* Centers items inside each <li> */
     text-align: center;
 }
 
@@ -282,6 +287,7 @@ category css
     gap: 10px;
     line-height: 15px;
 }
+
 .fashion-dropdown-container {
     position: relative;
     display: flex;
@@ -293,15 +299,16 @@ category css
 .fashion-dropdown {
     display: none;
     position: absolute;
-    top: 100%; /* Position dropdown below the Fashion category */
-    left: 50%;
-    transform: translateX(-50%);
+    top: 100%;
+    /* Position dropdown below the Fashion category */
+    left: 100%;
+    transform: translateX(-100%);
     background-color: white;
-    width: 200px;
+    width: 250px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 10;
     border-radius: 5px;
-    padding: 10px 0;
+    padding: 15px 0;
     flex-direction: column;
 }
 
@@ -318,9 +325,13 @@ category css
 /* Styling for dropdown list items */
 .fashion-dropdown ul li {
     padding: 10px 15px;
-    width: 100%;
+    width: 88%;
     display: flex;
     align-items: center;
+}
+
+.fashion-dropdown ul li:hover {
+    background-color: rgba(216, 216, 216, 0.267);
 }
 
 /* Links inside dropdown */
@@ -335,6 +346,15 @@ category css
 /* Icons inside dropdown */
 .fashion-dropdown ul li a i {
     margin-right: 8px;
+}
+
+.fashion-dropdown-container:hover .blue-invert span {
+    color: #0053d8;
+}
+
+.fashion-dropdown-container:hover .blue-invert i {
+    transform: rotate(-180deg);
+    transition: 0.3s;
 }
 
 /* Show dropdown on hover */
