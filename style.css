@@ -16,7 +16,8 @@ body {
 nav {
     background-color: rgb(255, 255, 255);
     height: 60px;
-    position: relative; /* Ensures dropdowns align properly */
+    position: relative;
+    /* Ensures dropdowns align properly */
     z-index: 100;
 }
 
@@ -66,7 +67,7 @@ nav {
     cursor: pointer;
 }
 
-.right {
+.login-right {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -89,7 +90,7 @@ nav {
 }
 
 .login img,
-.right div img {
+.login-right div img {
     height: 25px;
     color: gray;
 }
@@ -261,25 +262,27 @@ category css
 .category {
     background-color: rgb(255, 255, 255);
     margin: 7px 70px;
-    height: 140px;
+    height: 150px;
+
 }
 
 .category ul {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;/* Centers items vertically */
-    height: 100%;/* Ensures full height for proper vertical centering */
+    align-items: center; /* Centers items vertically */
+    height: 100%; /* Ensures full height for proper vertical centering */
 }
 
 .category ul li {
     display: flex;
-    flex-direction: column;/* Stacks image and text vertically */
+    flex-direction: column; /* Stacks image and text vertically */
     align-items: center; /* Centers items inside each <li> */
     text-align: center;
 }
 
 .category ul li img {
-    height: 65px;
+    height: 60px;
+    margin: 10px;
 }
 
 .category ul li span {
@@ -305,7 +308,7 @@ category css
     position: absolute;
     top: 100%;
     /* Position dropdown below the Fashion category */
-    left: 100%;
+    left: 30%;
     transform: translateX(-100%);
     background-color: white;
     width: 250px;
@@ -318,7 +321,6 @@ category css
 }
 
 .right {
-
     transform: translateX(0%);
 }
 
@@ -340,8 +342,17 @@ category css
     align-items: center;
 }
 
-.dropdown ul li:hover {
+.default {
+    font-weight: bold;
+}
+
+.bg-grey ul li:hover {
     background-color: rgba(216, 216, 216, 0.267);
+    font-weight: bold;
+}
+
+.right ul li:hover {
+    font-weight: bold;
 }
 
 /* Links inside dropdown */
@@ -387,3 +398,17 @@ category css
 #drop:hover .dropdown {
     display: flex;
 }
+
+.banner {
+    background-color: white;
+    margin: 14px 70px;
+    height: 190px;
+    
+}
+
+.banner img {
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+width: 100%;
+}
+

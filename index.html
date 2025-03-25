@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="img/fav-icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://kit.fontawesome.com/7166f6cd43.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
                 </div>
             </div>
 
-            <div class="right">
+            <div class="login-right">
                 <div class="login">
                     <a href="https://www.flipkart.com/account/login">
                         <img src="img/profile-52e0dc.svg" alt="Profile">
@@ -90,7 +90,7 @@
                         <span>Fashion <i class="fa-solid fa-chevron-down"></i></span>
                     </li>
                 </a>
-                <div class="dropdown">
+                <div class="dropdown bg-grey">
                     <ul>
                         <li><a href="#">Men's Top ware <i class="fa-solid fa-chevron-down"></i> </a></li>
                         <li><a href="#">Men's Bottom ware <i class="fa-solid fa-chevron-down"></i> </a></li>
@@ -108,18 +108,18 @@
                 </div>
                 <div class="dropdown right">
                     <ul>
-                        <li><a href="#">Men's Top ware <i class="fa-solid fa-chevron-down"></i> </a></li>
-                        <li><a href="#">Men's Bottom ware <i class="fa-solid fa-chevron-down"></i> </a></li>
-                        <li><a href="#">Women Ethnic <i class="fa-solid fa-chevron-down"></i> </a></li>
-                        <li><a href="#">Men Footwear <i class="fa-solid fa-chevron-down"></i> </a></li>
-                        <li><a href="#">Women Footwear <i class="fa-solid fa-chevron-down"></i> </a></li>
-                        <li><a href="#">Watches and Accessories <i class="fa-solid fa-chevron-down"></i> </a></li>
-                        <li><a href="#">Women Western <i class="fa-solid fa-chevron-down"></i> </a></li>
-                        <li><a href="#">Bags, Suitcase and Luggage <i class="fa-solid fa-chevron-down"></i> </a></li>
-                        <li><a href="#">Kids <i class="fa-solid fa-chevron-down"></i> </a></li>
-                        <li><a href="#">Essentials <i class="fa-solid fa-chevron-down"></i> </a></li>
-                        <li><a href="#">Winter <i class="fa-solid fa-chevron-down"></i> </a></li>
-
+                        <li><a href="#" class="default">More in Men's Top Wear </a></li>
+                        <li><a href="#">All </a></li>
+                        <li><a href="#">Men's T-Shirts </a></li>
+                        <li><a href="#">Men's Casual Shirts </a></li>
+                        <li><a href="#">Men's Formal Shirts </a></li>
+                        <li><a href="#">Men's Kurtas </a></li>
+                        <li><a href="#">Men's Ethnic Sets </a></li>
+                        <li><a href="#">Men's Blazers </a></li>
+                        <li><a href="#">Men's Raincoat </a></li>
+                        <li><a href="#">Men's Windcheaters </a></li>
+                        <li><a href="#">Men's Suit </a></li>
+                        <li><a href="#">Men's Fabrics </a></li>
                     </ul>
                 </div>
             </div>
@@ -262,9 +262,36 @@
             </div>
         </ul>
     </div>
+
+    <div class="banner">
+        
+        <img src="img/banner1.webp" id="sliderImage" alt="Banner">
+    </div>
+
     <script>
+        // Array of image sources
+        const images = [
+            "img/banner1.webp",
+            "img/banner2.webp",
+            "img/banner3.png",
+            "img/banner4.webp",
+            "img/banner5.jpg",
+            "img/banner6.webp",
+            "img/banner7.webp"
+        ];
 
+        let index = 0; // Current image index
+        const sliderImg = document.getElementById("sliderImage");
+
+        function changeImage() {
+            setTimeout(() => {
+                index = (index + 1) % images.length; // Loop through images
+                sliderImg.src = images[index]; // Change image
+            }, 500);
+        }
+
+        setInterval(changeImage, 3000); // Change image every 3 seconds
     </script>
-</body>
 
+</body>
 </html>
