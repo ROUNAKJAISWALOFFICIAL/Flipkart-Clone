@@ -16,6 +16,8 @@ body {
 nav {
     background-color: rgb(255, 255, 255);
     height: 60px;
+    position: relative; /* Ensures dropdowns align properly */
+    z-index: 100;
 }
 
 .navbar {
@@ -79,6 +81,7 @@ nav {
     cursor: pointer;
     font-size: 15px;
     position: relative;
+
 }
 
 .login .drop-down-menu {
@@ -111,6 +114,7 @@ nav {
 .login:hover .drop-down-menu {
     transform: rotate(-180deg);
 }
+
 .login .drop-down-menu {
     transform: rotate(0deg);
     transition: transform 0.3s ease;
@@ -258,24 +262,19 @@ category css
     background-color: rgb(255, 255, 255);
     margin: 7px 70px;
     height: 140px;
-    position: relative;
 }
 
 .category ul {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    /* Centers items vertically */
-    height: 100%;
-    /* Ensures full height for proper vertical centering */
+    align-items: center;/* Centers items vertically */
+    height: 100%;/* Ensures full height for proper vertical centering */
 }
 
 .category ul li {
     display: flex;
-    flex-direction: column;
-    /* Stacks image and text vertically */
-    align-items: center;
-    /* Centers items inside each <li> */
+    flex-direction: column;/* Stacks image and text vertically */
+    align-items: center; /* Centers items inside each <li> */
     text-align: center;
 }
 
@@ -301,7 +300,7 @@ category css
 }
 
 /* Dropdown initially hidden */
-.fashion-dropdown {
+.dropdown {
     display: none;
     position: absolute;
     top: 100%;
@@ -317,12 +316,14 @@ category css
     flex-direction: column;
 
 }
-.right{
+
+.right {
 
     transform: translateX(0%);
 }
+
 /* Ensure dropdown items are in a vertical list */
-.fashion-dropdown ul {
+.dropdown ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -332,19 +333,19 @@ category css
 }
 
 /* Styling for dropdown list items */
-.fashion-dropdown ul li {
+.dropdown ul li {
     padding: 10px 15px;
     width: 88%;
     display: flex;
     align-items: center;
 }
 
-.fashion-dropdown ul li:hover {
+.dropdown ul li:hover {
     background-color: rgba(216, 216, 216, 0.267);
 }
 
 /* Links inside dropdown */
-.fashion-dropdown ul li a {
+.dropdown ul li a {
     text-decoration: none;
     color: black;
     display: flex;
@@ -354,17 +355,19 @@ category css
 }
 
 /* Icons inside dropdown */
-.fashion-dropdown ul li a i {
+.dropdown ul li a i {
     margin-right: 8px;
 }
-.fashion-dropdown ul li a i{
-rotate: -90deg;
-color: gray;
-display: none;
+
+.dropdown ul li a i {
+    rotate: -90deg;
+    color: gray;
+    display: none;
 }
-.fashion-dropdown ul li:hover i{
-display:block;
-transition: 0.2s;
+
+.dropdown ul li:hover i {
+    display: block;
+    transition: 0.2s;
 }
 
 .dropdown-container:hover .blue-invert span {
@@ -381,6 +384,6 @@ transition: 0.2s;
 }
 
 /* Show dropdown on hover */
-#fashion:hover .fashion-dropdown {
+#drop:hover .dropdown {
     display: flex;
 }
