@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    scrollbar-width: none;
 }
 
 a {
@@ -316,7 +317,10 @@ category css
     flex-direction: column;
 
 }
+.right{
 
+    transform: translateX(0%);
+}
 /* Ensure dropdown items are in a vertical list */
 .fashion-dropdown ul {
     list-style: none;
