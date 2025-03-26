@@ -469,3 +469,17 @@ category css
     object-fit:scale-down;
 
 }
+.all-products-links{
+    background-color: rgb(235, 234, 234);
+    margin-top: 100px;
+    padding: 40px 20px;
+    font-size: 13px;
+}
+.all-products-links h2{
+margin: 20px 0 ;
+color: #6d6d6d;
+}
+.all-products-links span{
+
+color: #6d6d6d;
+}
