@@ -269,14 +269,18 @@ category css
 .category ul {
     display: flex;
     justify-content: space-evenly;
-    align-items: center; /* Centers items vertically */
-    height: 100%; /* Ensures full height for proper vertical centering */
+    align-items: center;
+    /* Centers items vertically */
+    height: 100%;
+    /* Ensures full height for proper vertical centering */
 }
 
 .category ul li {
     display: flex;
-    flex-direction: column; /* Stacks image and text vertically */
-    align-items: center; /* Centers items inside each <li> */
+    flex-direction: column;
+    /* Stacks image and text vertically */
+    align-items: center;
+    /* Centers items inside each <li> */
     text-align: center;
 }
 
@@ -403,12 +407,65 @@ category css
     background-color: white;
     margin: 14px 70px;
     height: 190px;
-    
+
 }
+
 
 .banner img {
     object-fit: cover;
     transition: opacity 1s ease-in-out;
-width: 100%;
+    width: 100%;
 }
 
+/*product slider css*/
+.product-slider {
+    background-color: white;
+    margin: 15px 70px;
+    height: 250px;
+    margin-bottom: 22px;
+
+}
+
+
+.slider-title {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 10px;
+    font-size: 24px;
+
+}
+
+.product-container {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+.product-container .item{
+    min-width: 150px;
+    background: white;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.product-container .item h3{
+    font-size: 14px;
+    margin: 10px 0;
+    white-space: nowrap;  /* Prevent text from wrapping */
+    overflow: hidden;      /* Hide overflowing text */
+    text-overflow: ellipsis; /* Show '...' for overflow */
+    width: 100%; /* Ensures text fits within its container */
+    display: block;
+}
+.product-container .item p{
+    font-size: 14px;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333333;
+}
+.product-container .item img{
+    width: 80px;
+    height: 80px;
+    object-fit:scale-down;
+
+}
